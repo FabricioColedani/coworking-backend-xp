@@ -4,7 +4,7 @@ Feature: Reserva de salas de coworking
   Para tener un lugar privado de trabajo
 
   Scenario: Reserva exitosa de una sala disponible
-    Given que la sala "Sala A" existe y está disponible el "2024-10-15"
+    Given que la sala "Sala A" existe y está disponible el "2026-10-15"
     When el usuario "Juan" intenta reservar la "Sala A" para el "2026-10-15"
     Then la reserva debe ser confirmada con estado "CONFIRMED"
     And la respuesta debe retornar un código de estado 201
