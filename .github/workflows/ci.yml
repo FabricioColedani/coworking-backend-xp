@@ -32,3 +32,5 @@ jobs:
 
       - name: Ejecutar pruebas BDD (Cucumber)
         run: npm run test:bdd
+        env:
+          NODE_ENV: test

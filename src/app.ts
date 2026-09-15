@@ -13,7 +13,7 @@ const controller = new BookingController(service);
 app.post('/api/bookings', controller.createBooking);
 app.post('/api/bookings/:id/cancel', controller.cancelBooking);
 
-if (process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== 'test' && require.main === module) {
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
     console.log(`Servidor iniciado en puerto ${PORT}`);
